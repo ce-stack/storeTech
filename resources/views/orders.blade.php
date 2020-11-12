@@ -23,44 +23,45 @@
             <!-- cart area start -->
             <div class="cart-main-area mtb-60px">
                 <div class="container">
-                    <h3 class="cart-page-title">Your cart items</h3>
+                   
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="col-md-3"></div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <h3 class="cart-page-title text-center">Your cart items</h3>
                             <form action="#">
                                 <div class="table-content table-responsive cart-table-content">
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Image</th>
-                                                <th>Product Name</th>
+                                               
+                                                <th>Toal Items</th>
                                              
                                           
-                                                <th>price</th>
+                                                <th>Total Price</th>
                                                 
                                             </tr>
                                         </thead>
                                         @foreach ($carts as $cart)
-                                            @foreach ($cart->items as $item)
+                                        {{-- {{ dd($cart->totalQty) }} --}}
+                                           
+                                            
                                             <tbody>
                                                 <tr>
-                                                    <td class="product-thumbnail" style="width:100px">
-                                                    <a href="#"><img src="{{ $item['image'] }}" alt="" /></a>
-                                                    </td>
-                                                <td class="product-name"><a href="#"></a>{{ $item['title'] }}</td>
+                                                <td class="product-name"><a href="#"></a>{{ $cart->totalQty }}</td>
                                                     
                                                 
-                                                <td class="product-subtotal">{{ $item['price'] }}</td>
+                                                <td class="product-subtotal">{{ $cart->totalPrice }}</td>
                                                     
                                                 </tr>
                                                
-                                            </tbody>                                                
-                                            @endforeach
+                                            </tbody>   
                                         @endforeach
 
                                     </table>
                                 </div>
                             </form>
                         </div>
+                        <div class="col-md-3"></div>
                     </div>
                 </div>
             </div>

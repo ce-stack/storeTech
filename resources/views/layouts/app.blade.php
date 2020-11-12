@@ -9,6 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -16,7 +17,10 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
         <!-- Google Fonts -->
         <link href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;display=swap') }}" rel="stylesheet" />
         <!-- All CSS Flies   -->
@@ -500,6 +504,7 @@
         </footer>
         <!--  Footer Area End -->
     </div>
+    
     <script src="{{ asset('assets/js/vendor/jquery-3.5.1.min.js') }}"></script>
         <script src="{{asset ('assets/js/vendor/modernizr-3.7.1.min.js') }}"></script>
 
@@ -523,7 +528,8 @@
         <!-- Main Activation JS -->
         <script src="{{ asset('assets/js/main.js') }}"></script>
         @include('sweetalert::alert')
-
+        
         @yield('script')
+              
 </body>
 </html>

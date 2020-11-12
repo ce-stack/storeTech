@@ -52,7 +52,7 @@
             <div class="description-review-topbar nav">
                 <a data-toggle="tab" href="#des-details1">Description</a>
               
-                <a data-toggle="tab" href="#des-details3">Reviews (2)</a>
+                <a class="active" data-toggle="tab" href="#des-details3">Reviews (2)</a>
             </div>
             <div class="tab-content description-review-bottom">
                 
@@ -65,7 +65,7 @@
                         </p>
                     </div>
                 </div>
-                <div id="des-details3" class="tab-pane">
+                <div id="des-details3" class="tab-pane active">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="review-wrapper">
@@ -132,31 +132,15 @@
                                 <h3>Add a Review</h3>
                                 <div class="ratting-form">
                                     <form action="#">
-                                        <div class="star-box">
-                                            <span>Your rating:</span>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                        </div>
+
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="rating-form-style mb-10">
-                                                    <input placeholder="Name" type="text" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="rating-form-style mb-10">
-                                                    <input placeholder="Email" type="email" />
-                                                </div>
-                                            </div>
                                             <div class="col-md-12">
                                                 <div class="rating-form-style form-submit">
-                                                    <textarea name="Your Review" placeholder="Message"></textarea>
-                                                    <input type="submit" value="Submit" />
+                                                    <input type="text" class="form-control" id="review" name="review"
+                                                    placeholder="Enter review" required>
+                                                    <button class="btn btn-primary" type="submit" id="add">
+                                                        <span class="glyphicon glyphicon-plus"></span> ADD
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -170,6 +154,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection

@@ -19,6 +19,7 @@ class OrderController extends Controller
         $carts = $orders->transform(function($cart , $key) {
             return unserialize($cart->cart);
         });
+        // dd($carts);
         return view('orders' , compact('carts'));
     }
 

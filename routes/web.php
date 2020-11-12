@@ -37,13 +37,17 @@ Route::post('/charge' , 'ProductController@charge')->name('charge')->middleware(
 
 Route::get('/shopping-cart', 'ProductController@showCart')->name('cart.show')->middleware('auth');
 
-Route::get('/orders', 'OrderController@index')->name('orders');
+Route::get('/orders', 'OrderController@index')->name('orders')->middleware('auth');
 
 Route::delete('/products/{product}', 'ProductController@destroy')->name('product.remove')->middleware('auth');
 
 Route::get('/single-product/{product}', 'ProductController@single')->name('product.show')->middleware('auth');
 
 Route::put('/products/{product}', 'ProductController@update')->name('product.update');
+
+Route::resource('/posts.comments','ProductCommentController')->only(['store']);
+
+Route::post('/usersComments','UserCommentController@store')->name('store');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
