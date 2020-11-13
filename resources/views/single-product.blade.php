@@ -128,7 +128,7 @@
                             </div>
                         </div>
                         <div class="col-lg-5">
-                            <div class="ratting-form-wrapper pl-50">
+                            {{-- <div class="ratting-form-wrapper pl-50">
                                 <h3>Add a Review</h3>
                                 <div class="ratting-form">
                                     <form action="#">
@@ -146,7 +146,14 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div>
+                            </div> --}}
+                            @auth()
+                                
+                            <comment-section :product_id="{{ $singleProduct->id }}"></comment-section>
+                            @else 
+                            <a>login to comment</a>
+                            @endauth
+                            
                         </div>
                     </div>
                 </div>
@@ -156,3 +163,46 @@
 </div>
 
 @endsection
+
+{{-- @section('script')
+  <script>
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        comments: {},
+        commentBox: '',
+        singleProduct: {!! $singleProduct->toJson() !!},
+        user: {!! Auth::check() ? Auth::user()->toJson() : 'null' !!}
+      },
+      mounted() {
+        this.getComments();
+      },
+      methods: {
+        getComments() {
+          axios.get('/api/product/'+this.singleProduct.id+'/comments')
+                .then((response) => {
+                  this.comments = response.data
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
+        },
+        postComment() {
+          axios.post('/api/posts/'+this.singleProduct.id+'/comment', {
+            api_token: this.user.api_token,
+            body: this.commentBox
+          })
+          .then((response) => {
+            this.comments.unshift(response.data);
+            this.commentBox = '';
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+        }
+      }
+    })
+
+  </script>
+@endsection --}}
