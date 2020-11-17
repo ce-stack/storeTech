@@ -46,7 +46,7 @@ Route::get('/single-product/{product}', 'ProductController@single')->name('produ
 Route::put('/products/{product}', 'ProductController@update')->name('product.update');
 
 //comment routes
-Route::get('comments/{productId}','CommentController@comments')->name('product.comments');
+Route::get('comments/{productId}','CommentController@index')->name('product.comments');
 Route::post('comments/store','CommentController@store')->name('product.store');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

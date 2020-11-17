@@ -8,6 +8,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 Window.axios = require('axios');
+window.Event = new Vue();
 
 let token = document.head.querySelector('meta[name="csrf-token"]');
 
@@ -29,6 +30,7 @@ if(token) {
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('comment-section', require('./components/Comments.vue').default);
+Vue.component('show-comment', require('./components/showComments.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

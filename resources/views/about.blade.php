@@ -19,6 +19,7 @@
                         </div>
                     </div>
                 </div>
+                {{-- <show-comment :product_id="{{ 2 }}"></show-comment> --}}
             </section>
             <!-- Breadcrumb Area End -->
 
@@ -26,7 +27,8 @@
             <section class="about-area">
                 <div class="container">
 
-                    @foreach ($abouts as $about)
+                    {{-- @foreach ($abouts as $about) --}}
+                    
                     <div class="row">
                         <div class="col-lg-6 mb-res-sm-50px">
                             <div class="about-left-image">
@@ -36,15 +38,15 @@
                         <div class="col-lg-6">
                             <div class="about-content">
                                 <div class="about-title">
-                                    <h2>Welcome To Ecolife</h2>
+                                    <h2>Welcome To TechStore</h2>
                                 </div>
                                 <p class="mb-30px">
-                                    {{ $about->description }}
+                                    offers an inverter solution for a solar photovoltaic (PV) system. The Company's products include SolarEdge Power Optimizer, SolarEdge Inverter,
                                 </p>
                             </div>
                         </div>
                     </div>    
-                    @endforeach
+                    {{-- @endforeach --}}
                     
                     <div class="row mt-60px">
                         
@@ -52,7 +54,7 @@
                             <div class="single-about">
                                 <h4>Our Team</h4>
                                 <p>
-                                   {{ $about->team }}
+                                    , coaching, mentoring, developing the team’s skills and managing conflict.  Learning these important team leader skills is an ongoing process
                                 </p>
                             </div>
                         </div>
@@ -60,7 +62,7 @@
                             <div class="single-about">
                                 <h4>Our Company</h4>
                                 <p>
-                                    {{ $about->company }}
+                                    The visual inspections our company specializes in can be applied to semiconductors, electronic parts, and many other industrial products. 
                                 </p>
                             </div>
                         </div>

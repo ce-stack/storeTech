@@ -9,6 +9,7 @@ use App\Product;
 use Auth;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
+//use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Redirect;
 
 class CommentController extends Controller
@@ -23,7 +24,7 @@ class CommentController extends Controller
     public function store(Request $request)
     {
       $comment = new Comment();
-      $comment->user_id = Auth::id();
+      $comment->user_id = \Auth::id();
       $comment->product_id = $request->product_id;
       $comment->body = $request->body;
       if($comment->save()) {
@@ -38,5 +39,14 @@ class CommentController extends Controller
       }
       Session::flash('error' , 'comment creation failed');
       return Redirect::back();
+      }
+
+      public function index($id) {
+        // Product
+        // return BlogPost::with('comments' , 'user' , 'comments.user')
+        // ->findOrFail($id);
+        $comments = Comment::where('product_id'  ,$id)->get();
+        
+        return response()->json($comments);
       }
   }

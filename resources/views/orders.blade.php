@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.product')
 
 @section('content')
     
@@ -9,10 +9,10 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="breadcrumb-content">
-                                <h1 class="breadcrumb-hrading">Wishlist Page</h1>
+                                <h1 class="breadcrumb-hrading">Your Orders</h1>
                                 <ul class="breadcrumb-links">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>Wishlist</li>
+                                    <li><a href="{{ route('welcome') }}">Home</a></li>
+                                    <li>Orders</li>
                                 </ul>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                                             </tr>
                                         </thead>
                                         @foreach ($carts as $cart)
-                                        {{-- {{ dd($cart->totalQty) }} --}}
+                                       
                                            
                                             
                                             <tbody>

@@ -15,6 +15,7 @@ class AboutController extends Controller
     public function index()
     {
        $abouts = About::all();
+    //   dd($abouts);
         return view('about' , compact('abouts'));
     }
 

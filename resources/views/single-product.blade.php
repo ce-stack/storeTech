@@ -1,7 +1,7 @@
 
 
 
-@extends('layouts.app')
+@extends('layouts.product')
 @section('content')
     
 
@@ -67,86 +67,11 @@
                 </div>
                 <div id="des-details3" class="tab-pane active">
                     <div class="row">
-                        <div class="col-lg-7">
-                            <div class="review-wrapper">
-                                <div class="single-review">
-                                    <div class="review-img">
-                                        <img src="assets/images/testimonial-image/1.png" alt="" />
-                                    </div>
-                                    <div class="review-content">
-                                        <div class="review-top-wrap">
-                                            <div class="review-left">
-                                                <div class="review-name">
-                                                    <h4>White Lewis</h4>
-                                                </div>
-                                                <div class="rating-product">
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="review-left">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                        </div>
-                                        <div class="review-bottom">
-                                            <p>
-                                                Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Suspendisse viverra ed viverra. Mauris ullarper euismod vehicula. Phasellus quam nisi, congue id nulla.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-review child-review">
-                                    <div class="review-img">
-                                        <img src="assets/images/testimonial-image/2.png" alt="" />
-                                    </div>
-                                    <div class="review-content">
-                                        <div class="review-top-wrap">
-                                            <div class="review-left">
-                                                <div class="review-name">
-                                                    <h4>White Lewis</h4>
-                                                </div>
-                                                <div class="rating-product">
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                    <i class="ion-android-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="review-left">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                        </div>
-                                        <div class="review-bottom">
-                                            <p>Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Sus pen disse viverra ed viverra. Mauris ullarper euismod vehicula.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-lg-6">
+                          <show-comment :product_id="{{ $singleProduct->id }}"></show-comment>
                         </div>
-                        <div class="col-lg-5">
-                            {{-- <div class="ratting-form-wrapper pl-50">
-                                <h3>Add a Review</h3>
-                                <div class="ratting-form">
-                                    <form action="#">
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="rating-form-style form-submit">
-                                                    <input type="text" class="form-control" id="review" name="review"
-                                                    placeholder="Enter review" required>
-                                                    <button class="btn btn-primary" type="submit" id="add">
-                                                        <span class="glyphicon glyphicon-plus"></span> ADD
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div> --}}
+                        <div class="col-lg-6">
+                            
                             @auth()
                                 
                             <comment-section :product_id="{{ $singleProduct->id }}"></comment-section>

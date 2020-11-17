@@ -29,13 +29,7 @@
                             <div class="product-decs">
                                 <a class="inner-link" href="#"><span>STUDIO DESIGN</span></a>
                             <h2><a href="#" class="product-link">{{ $product->title }}</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
+                               
                                 <div class="pricing-meta">
                                     <ul>
                                     <li class="current-price">€: {{$product->price}}</li>
@@ -56,7 +50,7 @@
 
                     <div class="best-sell-slider owl-carousel owl-nav-style">
                         <!-- Single Item -->
-                        @foreach ($allProducts as $product)
+                        @foreach ($allProductsTwo as $product)
                             
                    
                         <article class="list-product">
@@ -75,13 +69,7 @@
                             <div class="product-decs">
                                 <a class="inner-link" href="#"><span>STUDIO DESIGN</span></a>
                             <h2><a href="#" class="product-link">{{ $product->title }}</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
+                               
                                 <div class="pricing-meta">
                                     <ul>
                                     <li class="current-price">€: {{$product->price}}</li>

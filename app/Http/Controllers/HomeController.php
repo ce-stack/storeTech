@@ -7,7 +7,7 @@ use App\DigitalProducts;
 use App\Product;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -32,9 +32,15 @@ class HomeController extends Controller
         {
             toast(session('success'), 'success');
         }
-        $allProducts = Product::latest()->take(5)->get();
-      
-        return view('welcome' , compact('allProducts'));
+        $allProducts = Cache::remember('allProducts', now()->addSeconds(120), function () {
+            return Product::inRandomOrder()->take(5)->get();
+        });
+
+        $allProductsTwo = Cache::remember('allProductsTwo', now()->addSeconds(120), function () {
+            return Product::inRandomOrder()->take(5)->get();
+        });
+
+        return view('welcome' , compact('allProducts' , 'allProductsTwo'));
     }
 
     

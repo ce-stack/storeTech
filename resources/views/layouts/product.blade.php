@@ -141,6 +141,92 @@
                         <!--Seach Area Start -->
                         <div class="header_account_list search_list">
                            
+                            <div class="dropdown_search">
+                                <form action="#">
+                                    <input placeholder="Search entire store here ..." type="text" />
+                                    <div class="search-category">
+                                        <select class="bootstrap-select" name="poscats">
+                                            <option value="0">All categories</option>
+                                            <option value="104">
+                                                Fresh Food
+                                            </option>
+                                            <option value="183">
+                                                - - Fresh Fruit
+                                            </option>
+                                            <option value="187">
+                                                - - - - Bananas
+                                            </option>
+                                            <option value="188">
+                                                - - - - Apples &amp; Pears
+                                            </option>
+                                            <option value="189">
+                                                - - - - Berries &amp; Cherries
+                                            </option>
+                                            <option value="190">
+                                                - - - - Oranges &amp; Citrus Fruit
+                                            </option>
+                                            <option value="191">
+                                                - - - - Grapes
+                                            </option>
+                                            <option value="184">
+                                                - - Fresh Vegetables
+                                            </option>
+                                            <option value="192">
+                                                - - - - Potatoes &amp; Sweet Potatoes
+                                            </option>
+                                            <option value="193">
+                                                - - - - Onions &amp; Leeks
+                                            </option>
+                                            <option value="194">
+                                                - - - - Carrots &amp; Root Vegetables
+                                            </option>
+                                            <option value="195">
+                                                - - - - Broccoli &amp; Cauliflower
+                                            </option>
+                                            <option value="196">
+                                                - - - - Cabbages &amp; Greens
+                                            </option>
+                                            <option value="185">
+                                                - - Fresh Salad &amp; Dips
+                                            </option>
+                                            <option value="197">
+                                                - - - - Lettuce &amp; Salad bags
+                                            </option>
+                                            <option value="198">
+                                                - - - - Tomatoes
+                                            </option>
+                                            <option value="199">
+                                                - - - - Cucumber
+                                            </option>
+                                            <option value="200">
+                                                - - - - Celery
+                                            </option>
+                                            <option value="201">
+                                                - - - - Peppers
+                                            </option>
+                                            <option value="186">
+                                                - - Milk, Butter &amp; Eggs
+                                            </option>
+                                            <option value="202">
+                                                - - - - Milk
+                                            </option>
+                                            <option value="203">
+                                                - - - - Spreads &amp; Margarine
+                                            </option>
+                                            <option value="204">
+                                                - - - - Fresh Cream &amp; Custard
+                                            </option>
+                                            <option value="205">
+                                                - - - - Eggs
+                                            </option>
+                                            <option value="206">
+                                                - - - - Baking &amp; Cooking
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <button type="submit"><i class=""></i></button>
+                                </form>
+                            </div>
                         </div>
                         <!--Seach Area End -->
                         <!--Contact info Start -->
@@ -187,40 +273,7 @@
     <!--Header Bottom Account End -->
 </header>
 <!-- Header End -->
-<div class="slider-area">
-    <div class="slider-active-3 owl-carousel slider-hm8 owl-dot-style">
-        <!-- Slider Single Item Start -->
-        <div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/sample-21.jpg);">
-            <div class="container">
-                <div class="slider-content-1 slider-animated-1 text-left">
-                    {{-- <span class="animated">NOT FRIED NOT BAKED</span> --}}
-                    <h1 class="animated">
-                        Digital And Medical <br />
-                        Furntirue Products
-                    </h1>
-                    {{-- <p class="animated">Free Shipping On Qualified Orders Over $35</p> --}}
-                    <a href="shop-4-column.html" class="shop-btn animated">SHOP NOW</a>
-                </div>
-            </div>
-        </div>
-        <!-- Slider Single Item End -->
-        <!-- Slider Single Item Start -->
-        <div class="slider-height-6 d-flex align-items-start justify-content-start bg-img" style="background-image: url(assets/images/slider-image/sample-22.jpg);">
-            <div class="container">
-                <div class="slider-content-1 slider-animated-1 text-left">
-                    <span class="animated">100% Quality</span>
-                    <h1 class="animated">
-                       Your Store <br />
-                        Is Here
-                    </h1>
-                    {{-- <p class="animated">fresh New pack Brusting Fruits</p> --}}
-                    <a href="shop-4-column.html" class="shop-btn animated">SHOP NOW</a>
-                </div>
-            </div>
-        </div>
-        <!-- Slider Single Item End -->
-    </div>
-</div>
+
 <!-- Slider Arae End -->
 <!-- Static Area Start -->
 <section class="static-area mtb-60px">
@@ -228,7 +281,15 @@
         <div class="static-area-wrap">
             <div class="row">
                 <!-- Static Single Item Start -->
-              
+                {{-- <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
+                    <div class="single-static pb-res-md-0 pb-res-sm-0 pb-res-xs-0">
+                        <img src="assets/images/icons/static-icons-1.png" alt="" class="img-responsive" />
+                        <div class="single-static-meta">
+                            <h4>Free Shipping</h4>
+                            <p>On all orders over $75.00</p>
+                        </div>
+                    </div>
+                </div> --}}
                 <!-- Static Single Item End -->
                 <!-- Static Single Item Start -->
                 <div class="col-lg-4 col-xs-12 col-md-6 col-sm-6">
