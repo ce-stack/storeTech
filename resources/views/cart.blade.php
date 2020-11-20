@@ -1,5 +1,5 @@
-  
-@extends('layouts.app')
+
+@extends('layouts.product')
 
 
 @section('content')
@@ -19,7 +19,7 @@
 
 
             @foreach( $cart->items as $product)
-            <div class="card mb-2">
+            <div class="card mb-2" style="background-color: #4fb68d">
                 <div class="card-body">
                     <h5 class="card-title">
                         {{ $product['title'] }}
@@ -31,7 +31,7 @@
                         <form action="{{ route('product.update',$product['id'])}}" method="post">
                             @csrf
                             @method('put')
-                         
+
                             <input type="text" name="qty" name="qtybutton" value={{ $product['qty']}}>
                             <button type="submit" class="btn btn-secondary btn-sm float-right">Change</button>
 
@@ -52,8 +52,8 @@
 
         </div>
 
-        <div class="col-md-6">
-            <div class="card bg-primary text-white">
+        <div class="col-md-6" >
+            <div class="card  text-white" style="background-color: #4fb68d">
                 <div class="card-body">
                     <h3 class="card-titel">
                         Your Cart

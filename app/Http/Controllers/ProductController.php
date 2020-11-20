@@ -55,14 +55,14 @@ class ProductController extends Controller
        // dd($cart);
         session()->put('cart' , $cart);
         return redirect()->route('welcome')->with('success' , 'product was added');
-        
+
 
     }
 
 
     public function destroy(Product $product)
     {
-        
+
 
         $cart = new Cart( session()->get('cart'));
         $cart->remove($product->id);
@@ -88,44 +88,44 @@ class ProductController extends Controller
     }
 
     public function checkOut($amount) {
-    
+
         return view('checkout' , compact('amount'));
     }
 
     public function charge(Request $request) {
        $stripe = Stripe::make('sk_test_Mm7vdIZ440xsvLQ1FB9tzjN600hhutebub');
-     
+
         $charge =$stripe->charges()->create([
         'currency' => 'USD',
         'source' => $request->stripeToken,
         'amount' => $request->amount,
         'description' => 'test laravel app'
        ]);
-      
-            
+
+
        $chargId = $charge['id'];
 
        if($chargId) {
          $order= auth()->user()->orders()->create([
               'cart' => serialize(session()->get('cart'))
           ]);
-        
-          
-          Mail::to($order->user)->send(
+
+
+          Mail::to($order->user)->queue(
             new OrderCompleted($order)
         );
         session()->forget('cart');
-       
-        
+
+
         return redirect()->route('welcome')->with('success' , 'payment was done thanks');
-        
+
        } else {
         return redirect()->back();
        }
-       
-       
 
-       
+
+
+
     }
 
     /**
