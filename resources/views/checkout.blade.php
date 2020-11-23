@@ -83,7 +83,7 @@
 
                                         </div>
 
-                                        <button class="btn btn-success mt-2">Submit Payment</button>
+                                        <button class="btn btn-success mt-2">Submit Payment test with (4242 -4242 - 4242 4242 44-22 222 22)</button>
                                         <p id="loading" style="display:none;">please wait payment is in progress</p>
                                       </form>
 
